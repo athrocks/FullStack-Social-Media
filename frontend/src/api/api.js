@@ -24,7 +24,7 @@ export const getPostsByUser = (userId) => api.get(`/posts/users/${userId}`);
 export const getUserPhotoPosts = (userId) => api.get(`/posts/users/photos/${userId}`);
 export const getPhotoPosts = () => api.get('/posts/photos');
 
-/*
+
 // Comment Management
 export const getComments = () => api.get('/comment/');
 export const addComment = (commentData) => api.post('/comment/', commentData);
@@ -32,6 +32,7 @@ export const deleteComment = (id) => api.delete(`/comment/${id}`);
 export const getCommentsByUser = (userId) => api.get(`/comment/users/${userId}`);
 export const getCommentsByPost = (postId) => api.get(`/comment/posts/${postId}`);
 
+/*
 // Like System (Post Likes)
 export const getPostLikes = () => api.get('/likepost/');
 export const createPostLike = (likeData) => api.post('/likepost/', likeData);
@@ -61,16 +62,12 @@ export const getReportById = (reportId) => api.get(`/reports/${reportId}`);
 export const updateReport = (reportId, reportData) => api.put(`/reports/${reportId}`, reportData);
 export const deleteReport = (reportId) => api.delete(`/reports/${reportId}`);
 export const getReportsByUser = (userId) => api.get(`/reports/users/${userId}`);
+*/
 
 // City Management
 export const getCities = () => api.get('/city/');
 export const createCity = (cityData) => api.post('/city/', cityData);
 export const getCityById = (id) => api.get(`/city/${id}`);
 export const deleteCity = (id) => api.delete(`/city/${id}`);
-*/
-
-export const getCityById = (id) => api.get(`/city/${id}`);
-export const createCity = (cityData) => api.post('/city/', cityData);
-
 
 export default api;

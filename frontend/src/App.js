@@ -13,6 +13,13 @@ import PostUpdate from "./components/Post/PostUpdate";
 
 import CityDetail from "./components/City/CityDetail";
 import CityCreate from "./components/City/CityCreate";
+import CityList from "./components/City/CityList";
+import CityUpdate from "./components/City/CityUpdate";
+
+import CommentList from "./components/Comment/CommentList";
+import AddComment from "./components/Comment/AddComment";
+import CommentSection from "./components/Comment/CommentSection";
+import Comment from "./components/Comment/Comment";
 
 const App = () => {
   return (
@@ -23,7 +30,7 @@ const App = () => {
         <Route path="/users/:id" element={<UserDetail />} />
         <Route path="/users/create" element={<UserCreate />} />
         <Route path="/users/update/:id" element={<UserUpdate />} />
-        
+
         {/* Post Routes */}
         <Route path="/posts" element={<PostList />} />
         <Route path="/posts/:id" element={<PostDetail />} />
@@ -31,8 +38,18 @@ const App = () => {
         <Route path="/posts/update/:id" element={<PostUpdate />} />
 
         {/* City Routes */}
-        <Route path="/city/create" element={<CityCreate />} />
+        <Route path="/cities" element={<CityList />} />
+        <Route path="/city/new" element={<CityCreate />} />
+        <Route path="/city/edit/:id" element={<CityUpdate />} />
         <Route path="/city/:id" element={<CityDetail />} />
+
+        {/* Comment Routes */}
+        <Route path="/comments" element={<CommentList />} />
+        <Route path="/comments/add" element={<AddComment />} />
+        <Route path="/comments/:commentId" element={<Comment />} />
+        <Route path="/posts/:postId/comments" element={<CommentSection />} />
+
+
       </Routes>
     </Router>
   );
